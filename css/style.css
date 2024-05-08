@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+
+
+:root {
+ 
+  --primary-color: #ffcd42;
+  --secondary-color: #ffd35c;
+  --bg-primary: #ffffff;
+  --text-color: #222222;
+  --text-color-two: #ffffff;
+  --bg-secondary: #000000;
+  --card-background: #f4f4f4;
+  --bg-secondary-two: #111111;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+
+  --weight-small: 400;
+  --weight-semibold: 600;
+  --weight-bold: 800;
+
+
+  --width-small: 600px;
+  --width-medium: 1100px;
+  --width-large: 1300px;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+
+body {
+  font-family: "Raleway";
+  line-height: 1.5;
+  overflow-x: hidden; 
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  height: 80px;
+  width: 100%;
+}
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-link {
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.navbar #logo img {
+  display: block;
+  width: 60px;
+}
+
+.navbar .btn {
+  margin-right: 1.5rem;
+}
+
+
+/* Main Section */
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.profile-image {
+  width: 300px;
+  border-radius: 50%;
+  animation: pfpupdown 1s infinite alternate;
+}
+
+@keyframes pfpupdown {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* Projects */
+#projects {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 5rem;
+}
+
+#projects .btn {
+  align-self: center;
+  margin: 2rem 0;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(350px, auto);
+  grid-gap: 15px;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.project-bio {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 160px;
+  left: 10px;
+}
+
+/* Footer */
+#footer {
+  background: #111111;
+}
+
+#footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  min-height: 160px;
+  text-align: center;
+}
+
+#footer a {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+#footer a:hover {
+  opacity: 0.5;
+}
+
+#footer .social {
+  margin: 0.9rem 0;
+}
+
+#footer .social img {
+  width: 20px;
+  height: 20px;
+}
+
+#footer .social a {
+  margin: 0 0.5rem;
+}
+
+#footer p {
+  font-size: 0.8rem;
+}
+
+
+
+.container {
+  max-width: var(--width-medium);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+h1::selection,
+h2::selection {
+  color: #111;
+  background: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.9rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #000000;
+}
+
+.btn-secondary {
+  margin: 5px 0;
+  background-color: var(--bg-secondary);
+  color: var(--bg-primary);
+}
+
+
+.btn-primary:hover {
+  background: var(--secondary-color);
+}
+
+
+
+/* Header Container */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  padding: 1rem;
+}
+
+.header-container > div {
+  margin-top: 1rem;
+}
+
+.content-text {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.content-text h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  transition: 0.2s ease-in-out;
+}
+
+.content-text p {
+  padding: 0.5rem;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* card1 */
+
+#card1 {
+  padding: 1rem;
+  background: url(/assets/project/food.gif) center center/cover;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+#card1 a {
+  color: #ffffff;
+  transition: 0.25s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+}
+
+.card a:hover {
+  color: var(--primary-color);
+}
+
+#card1:hover {
+  box-shadow: inset 0 100px 1000px 10px rgb(247, 146, 14);
+}
+
+#card1:hover .project-info {
+  opacity: 1;
+}
+
+/* card2 */
+
+#card2 {
+  padding: 1rem;
+  background: url(/assets/project/camera.gif) center center/cover;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+#card2 a {
+  color: #ffffff;
+  transition: 0.25s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+}
+
+
+
+#card2:hover {
+  box-shadow: inset 0 100px 1000px 10px rgb(0, 77, 192);
+}
+
+#card2:hover .project-info {
+  opacity: 1;
+}
+
+/* card3 */
+
+#card3 {
+  padding: 1rem;
+  background: url(/assets/project/roll.gif) center center/cover;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+#card3 a {
+  color: #ffffff;
+  transition: 0.25s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+}
+
+#card3:hover {
+  box-shadow: inset 0 100px 1000px 10px rgb(255, 135, 245);
+}
+
+#card3:hover .project-info {
+  opacity: 1;
+}
+
+/* card4 */
+
+#card4 {
+  padding: 1rem;
+  background: url(/assets/project/cat2.gif) center ;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+#card4 a {
+  color: #ffffff;
+  transition: 0.25s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+}
+
+
+#card4:hover {
+  box-shadow: inset 0 100px 1000px 10px rgba(168, 72, 72, 0.8);
+}
+
+#card4:hover .project-info {
+  opacity: 1;
+}
+
+
+
+#main {
+  position: relative;
+  width: 100%;
+  height: 150vh; 
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+#aboutme {
+  position: relative;
+  width: 350vh;
+  height: 80vh; 
+}
+
+#aboutme .background-video {
+  position: absolute;
+  padding-top: 150px;
+  top: 50%;
+  left: 50%;
+  width: 120%; 
+  height: 130%;
+  transform: translate(-50%, -60%); 
+  object-fit: cover; 
+  z-index: -1;
+}
+
+/* rocketexploooosion */
+#rocket {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#rocket:hover {
+  transform: scale(2);
+}
+
