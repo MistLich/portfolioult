@@ -422,7 +422,168 @@ h2::selection {
   transition: transform 0.3s ease-in-out;
 }
 
+#rocket.clicked {
+  animation: rocketAnimation 4s forwards;
+}
+
+@keyframes rocketAnimation {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-3000px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
 #rocket:hover {
   transform: scale(2);
 }
 
+/* custom scrollbar */
+
+body::-webkit-scrollbar {
+  width: 7px; 
+  border: color(orange);             
+}
+
+body::-webkit-scrollbar-track {
+  background: orange;       
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:chartreuse;    
+  border-radius: 20px;       
+    
+}
+
+.cursor {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.outer {
+  border: 2px solid #f7a000 ;
+}
+
+.inner {
+  background: #ffc400;
+  transition: 250ms ease-out;
+  z-index: 1000;
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(4);
+  transition: transform 250ms ease-in-out;
+}
+
+.inner.hover {
+  background: #b3ff00;
+  /* mix-blend-mode: difference; */
+  opacity: 0.25;
+}
+
+/* skills  */
+.skills {
+  position: relative;
+  min-height: 90vh;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  overflow: hidden;
+  padding-bottom: 130px;
+  ;
+}
+.skills h2 {
+  font-size:1cm;
+  padding-top: 1.5cm;
+  font-family: "Raleway";
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+.skills .heading {
+  padding-top: 1.5cm;
+  padding-bottom: 1.5cm;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.skills .heading span {
+  color: rgb(255, 230, 0);
+}
+.skills .containers {
+  /* background: rgba(0, 0, 22, 0.4); */
+  color: black;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+.skills .containers .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.skills .containers .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  transition: 0.2s;
+}
+.skills .containers .bar:hover {
+  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: white;
+}
+.skills .containers .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.skills .containers .bar .info i {
+  font-size: 4rem;
+}
+.skills .containers .bar .info span {
+  font-size: 20px;
+  line-height: 4;
+  font-family: "Raleway";
+  margin-left: 0.5rem;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+.parallax {
+  height: 100px; 
+  background-image: url('cloud2.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 24px; 
+}
+
+html {
+  cursor: none; 
+}
