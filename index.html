@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://unpkg.com/scrollreveal@4"></script>
   <title>Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="icon" href="/assets/logo.png" type="image/x-icon">
+  <div class="cursor outer"></div>
+  <div class="cursor inner"></div>
 </head>
 <body>
   <header id="main">
@@ -17,79 +20,153 @@
         <h1 id="logo"><img src="./assets/logo.png" alt="Logo"></h1>
         <ul class="nav-menu">
           <li><a class="nav-link btn btn-primary" href="#projects">PROJECTS</a></li>
+          <li><a class="nav-link btn btn-primary" href="#skills">SKILLS</a></li>
           <li><a class="nav-link btn btn-primary" href="#aboutme">ABOUT ME</a></li>
-          <li><a class="nav-link btn btn-primary" href="#">HOME</a></li>
           <li><a class="nav-link btn btn-primary" href="#footer">CONTACT</a></li>
         </ul>
       </div>
     </nav>
     <section class="header-container">
       <img class="profile-image" src="assets/profile-image.png" alt="Profile Image">
-      <h1>Am Edwin Benny</h1>
-      <div class="content-text">
-        <h2>Crafting Your</h2>
-        <h2>Perfect Digital Experiences</h2>
-        <p>A Developer driven by a passion for creating digital magic</p>
+      <h1 id="name">Am Edwin Benny</h1>
+      <div id="content-text" class="content-text">
+          <h2 id="title1">Crafting Your</h2>
+          <h2 id="title2">Perfect Digital Experiences</h2>
+          <p id="description">A Developer driven by a passion for creating digital magic</p>
       </div>
-      <a href="mailto:edwin.benny@experionglobal.com" class="btn btn-secondary">Mail me !</a>
+      <a id="mailme" href="mailto:edwin.benny@experionglobal.com" class="btn btn-secondary">Mail me !</a>
     </section>
   </header>
   <!--Projects-->
   <section id="projects" class="container">
     <div class="content-text">
-      <h2>Projects</h2>
-      <p>Projects I've participated</p>
+      <h2 id="title3">Projects</h2>
+      <p id="title4">Projects I've participated</p>
     </div>
     <article class="project">
       <!-- ProjectCards -->
-      <div href="" id="card1">
+      <div id="card1" class="project">
         <div class="project-info">
-          <div class="project-bio">
-            <h3>Food Delivery App</h3>
-            <p>Android Studio, Firebase and Kotlin</p>
-          </div>
+            <div class="project-bio">
+                <h3>Food Delivery App</h3>
+                <p>Android Studio, Firebase and Kotlin</p>
+            </div>
         </div>
-      </div>
-      <div href="" id="card2">
+    </div>
+    <div id="card2" class="project">
         <div class="project-info">
-          <div class="project-bio">
-            <h3>Visual Question Answering</h3>
-            <p>Android Studio, LSTM and VGG-19</p>
-          </div>
+            <div class="project-bio">
+                <h3>Visual Question Answering</h3>
+                <p>Android Studio, LSTM and VGG-19</p>
+            </div>
         </div>
-      </div>
-      <div href="" id="card3">
+    </div>
+    <div id="card3" class="project">
         <div class="project-info">
-          <div class="project-bio">
-            <h3>Project Three</h3>
-            <p>Still working on it</p>
-          </div>
+            <div class="project-bio">
+                <h3>Project Three</h3>
+                <p>Still working on it</p>
+            </div>
         </div>
-      </div>
-      <div href="" id="card4">
+    </div>
+    <div id="card4" class="project">
         <div class="project-info">
-          <div class="project-bio">
-            <h3>Project Four</h3>
-            <p>Still working on it</p>
-          </div>
+            <div class="project-bio">
+                <h3>Project Four</h3>
+                <p>Still working on it</p>
+            </div>
         </div>
-      </div>
+    </div>
     </article>
-    <a href="#" class="btn btn-secondary">See More</a>
+    <a href="loading.html" class="btn btn-secondary">See More</a>
   </section>
+  <!-- skills -->
+  
+  <div class="parallax"></div>
+  <!-- skills section starts -->
+  <section class="skills containers" id="skills">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/vid3.mp4" type="video/mp4">
+    </video>
+    <h2 id="title5">Skills & Abilities</h2>
+    <div class="containers">
+        <div class="row" id="skillsContainer">
+            
+          <div id="bar1" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
+                <span>AdobeXD</span>
+            </div>
+        </div>
+        <div id="bar2" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/>
+                <span>Visual Studio Code</span>
+            </div>
+        </div>
+        <div id="bar3" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/html-5.png"/>
+                <span>HTML5</span>
+            </div>
+        </div>
+        <div id="bar4" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/css3.png"/>
+                <span>CSS3</span>
+            </div>
+        </div>
+        <div id="bar5" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/javascript.png"/>
+                <span>JavaScript</span>
+            </div>
+        </div>
+        <div id="bar6" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>
+                <span>Bootstrap</span>
+            </div>
+        </div>
+        <div id="bar7" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/python.png"/>
+                <span>Python</span>
+            </div>
+        </div>
+        <div id="bar8" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/react-native.png"/>
+                <span>React Native</span>
+            </div>
+        </div>
+        <div id="bar9" class="bar">
+            <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/nodejs.png"/>
+                <span>Node.js</span>
+            </div>     
+        </div>
+    </div>
+</section>
+
+
+<div class="parallax"></div>
+
+
   <!-- AboutMe -->
   <section id="aboutme" class="container">
     <video autoplay muted loop class="background-video">
       <source src="assets/landscape.mp4" type="video/mp4">
     </video>
-    <div class="content-text">
-      <h2>About Me</h2>
-      <p>Hi there! I'm Edwin Benny, a developer by day and a dreamer by night. My journey in the digital realm began with a single line of code and has evolved into a passion for creating immersive experiences that blend technology with creativity.</p>
-      <p>As a developer, I thrive on challenges and love to push the boundaries of what's possible. Whether it's crafting pixel-perfect designs or diving into the depths of algorithms, I'm always eager to learn and grow.</p>
-      <p>When I'm not coding, you can find me exploring the great outdoors, capturing moments through my lens, or diving into a good book. I believe in the power of storytelling and strive to weave narratives into everything I create.</p>
-      <p>Let's connect and embark on a journey to bring your ideas to life!</p>
-      <a href="mailto:edwin.benny@experionglobal.com" class="btn btn-secondary">Get in Touch</a>
-    </div>
+    <div id="about-me-section" class="content-text">
+      <h2 id="title6">About Me</h2>
+      <p id="intro">Hi there! I'm Edwin Benny, a developer by day and a dreamer by night. My journey in the digital realm began with a single line of code and has evolved into a passion for creating immersive experiences that blend technology with creativity.</p>
+      <p id="paragraph1">As a developer, I thrive on challenges and love to push the boundaries of what's possible. Whether it's crafting pixel-perfect designs or diving into the depths of algorithms, I'm always eager to learn and grow.</p>
+      <p id="paragraph2">When I'm not coding, you can find me exploring the great outdoors, capturing moments through my lens, or diving into a good book. I believe in the power of storytelling and strive to weave narratives into everything I create.</p>
+      <p id="paragraph3">Let's connect and embark on a journey to bring your ideas to life!</p>
+      <a id="contactbtn" href="mailto:edwin.benny@experionglobal.com" class="btn btn-secondary">Get in Touch</a>
+  </div>
+  
   
     <div class="container">
       <a href="#main" id="rocket"><img src="assets/rocket.gif" alt="Rocket Icon" height="100px"></a>
@@ -107,8 +184,144 @@
         <a href="https://facebook.com"><img src="./assets/facebook-icon.png"></a>
         <a href="https://twitter.com"><img src="./assets/twitter-icon.png"></a>
       </div>
-      <p>Thanks for visiting!</p>
+      <p><marquee>Thanks for visiting!</marquee></p>
     </div>
   </footer>
+
+  <!-- Cursor -->
+  <script>
+    const cursor = document.querySelectorAll(".cursor");
+    const items = document.querySelectorAll("li, a,img,#card1,#card2,#card3,#card4");
+  
+    window.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+  
+      cursor.forEach(el => {
+        el.style.left = `${x}px`;
+        el.style.top = `${y}px`;
+        
+        items.forEach(item => {
+          item.addEventListener("mouseenter", () => {
+            el.classList.add("hover");
+          });
+          item.addEventListener("mouseleave", () => {
+            el.classList.remove("hover");
+          });
+        });
+      });
+    });
+  </script>
+
+<!-- rocket move -->
+<script>
+  document.getElementById("rocket").addEventListener("click", function() {
+  this.classList.add("clicked");
+  setTimeout(() => {
+    this.classList.remove("clicked");
+  }, 3000); 
+});
+</script>
+
+<!-- scroll reveal -->
+<script>
+
+const navOptions = {
+  reset: false,
+  easing: 'ease-in',
+  delay: 500
+};
+
+
+document.querySelectorAll('.nav-menu li').forEach((li) => {
+  ScrollReveal().reveal(li, navOptions);
+});
+
+const projectOptions = {
+            reset: true,
+            easing: 'ease-in',
+            delay: 50, 
+        };
+
+
+document.querySelectorAll('.project').forEach((card, index) => {
+    ScrollReveal().reveal(card, { ...projectOptions, delay: projectOptions.delay + index * 200 });
+});
+
+
+const containerOptions = {
+  reset: true,
+  easing: 'ease-in',
+  delay: 500 
+};
+
+
+['name', 'content-text', 'title1', 'title2', 'description', 'mailme','title3','title4'].forEach((id, index) => {
+  const element = document.getElementById(id);
+  if (element) {
+    ScrollReveal().reveal(element, { ...containerOptions, delay: containerOptions.delay + index * 200 });
+  }
+});
+
+const container2Options = {
+  reset: true,
+  easing: 'ease-in',
+  delay: 250
+};
+
+['title5', 'title6', 'intro', 'paragraph1', 'paragraph2', 'paragraph3', 'contact-btn'].forEach((id, index) => {
+  const element = document.getElementById(id);
+  if (element) {
+    ScrollReveal().reveal(element, { ...container2Options, delay: container2Options.delay + index * 200 });
+  }
+});
+
+
+
+const skillOptions = {
+  reset: true,
+  easing: 'ease-in',
+  delay: 100, 
+};
+
+
+document.querySelectorAll('.bar').forEach((bar, index) => {
+  ScrollReveal().reveal(bar, { ...skillOptions, delay: skillOptions.delay + index * 200 });
+});
+
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+
+function handleVideoVisibility(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.play();
+    } else {
+      entry.target.pause();
+      entry.target.currentTime = 0; 
+    }
+  });
+}
+
+
+const video = document.getElementById('bg-video');
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.30 
+};
+const observer = new IntersectionObserver(handleVideoVisibility, options);
+observer.observe(video);
+
+</script>
 </body>
 </html>
