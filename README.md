@@ -11,9 +11,6 @@ Scroll to top with animation<br>
 
 
 
-Loading page animation:
-
-![image](https://github.com/MistLich/portfolioult/assets/66840145/a020217a-320d-4871-8a7b-f70442fff14f)
 
 Portfolio page:
 
