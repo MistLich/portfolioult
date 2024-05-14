@@ -17,7 +17,7 @@
     <nav class="navbar">
       <div class="container">
         
-        <h1 id="logo"><img src="./assets/logo.png" alt="Logo"></h1>
+        <img src="./assets/logo.png" alt="Logo">
         <ul class="nav-menu">
           <li><a class="nav-link btn btn-primary" href="#projects">PROJECTS</a></li>
           <li><a class="nav-link btn btn-primary" href="#skills">SKILLS</a></li>
@@ -43,42 +43,43 @@
       <h2 id="title3">Projects</h2>
       <p id="title4">Projects I've participated</p>
     </div>
-    <article class="project">
+    <div class="project">
       <!-- ProjectCards -->
       <div id="card1" class="project">
         <div class="project-info">
-            <div class="project-bio">
-                <h3>Food Delivery App</h3>
-                <p>Android Studio, Firebase and Kotlin</p>
-            </div>
+          <div class="project-bio">
+            <h3>Food Delivery App</h3>
+            <p>Android Studio, Firebase and Kotlin</p>
+          </div>
         </div>
-    </div>
-    <div id="card2" class="project">
+      </div>
+      <div id="card2" class="project">
         <div class="project-info">
-            <div class="project-bio">
-                <h3>Visual Question Answering</h3>
-                <p>Android Studio, LSTM and VGG-19</p>
-            </div>
+          <div class="project-bio">
+            <h3>Visual Question Answering</h3>
+            <p>Android Studio, LSTM and VGG-19</p>
+          </div>
         </div>
-    </div>
-    <div id="card3" class="project">
+      </div>
+      <div id="card3" class="project">
         <div class="project-info">
-            <div class="project-bio">
-                <h3>Project Three</h3>
-                <p>Still working on it</p>
-            </div>
+          <div class="project-bio">
+            <h3>Project Three</h3>
+            <p>Still working on it</p>
+          </div>
         </div>
-    </div>
-    <div id="card4" class="project">
+      </div>
+      <div id="card4" class="project">
         <div class="project-info">
-            <div class="project-bio">
-                <h3>Project Four</h3>
-                <p>Still working on it</p>
-            </div>
+          <div class="project-bio">
+            <h3>Project Four</h3>
+            <p>Still working on it</p>
+          </div>
         </div>
+      </div>
     </div>
-    </article>
-    <a href="loading.html" class="btn btn-secondary">See More</a>
+    
+    <a href="#" class="btn btn-secondary">See More</a>
   </section>
   <!-- skills -->
   
@@ -289,7 +290,9 @@ document.querySelectorAll('.bar').forEach((bar, index) => {
   ScrollReveal().reveal(bar, { ...skillOptions, delay: skillOptions.delay + index * 200 });
 });
 
+</script>
 
+<script>
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
