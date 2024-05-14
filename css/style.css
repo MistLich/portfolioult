@@ -6,25 +6,9 @@
   --primary-color: #ffcd42;
   --secondary-color: #ffd35c;
   --bg-primary: #ffffff;
-  --text-color: #222222;
-  --text-color-two: #ffffff;
   --bg-secondary: #000000;
-  --card-background: #f4f4f4;
-  --bg-secondary-two: #111111;
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-
-
-  --weight-small: 400;
-  --weight-semibold: 600;
-  --weight-bold: 800;
-
-
-  --width-small: 600px;
   --width-medium: 1100px;
-  --width-large: 1300px;
 }
-
-
 
 html {
   scroll-behavior: smooth;
@@ -37,13 +21,12 @@ html {
   box-sizing: border-box;
 }
 
-ul {
+.container ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-
 }
 
 
@@ -63,9 +46,8 @@ body {
 
 .navbar .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  z-index: 50;
+  z-index: 5;
   height: 80px;
   width: 100%;
 }
@@ -81,21 +63,17 @@ body {
   font-weight: 600;
 }
 
-.navbar #logo img {
-  display: block;
-  width: 60px;
-}
-
 .navbar .btn {
-  margin-right: 1.5rem;
+  margin-right: 0.6cm; /* gap */
 }
 
 
 /* Main Section */
 #main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  position: relative;
+  width: 100%;  /*scrollbar white gap */
+  height: 150vh; 
+  overflow: hidden;
 }
 
 .profile-image {
@@ -117,14 +95,14 @@ body {
 
 /* Projects */
 #projects {
-  display: flex;
+  display: flex;  /*btn */
   flex-direction: column;
   margin: 2rem auto 5rem;
 }
 
 #projects .btn {
-  align-self: center;
-  margin: 2rem 0;
+  align-self: center; /* othewise div will be long sized*/
+  margin: 2rem 0; /*adjusting gap between buttn and elem*/
 }
 
 .project {
@@ -135,18 +113,13 @@ body {
 }
 
 .project-info {
-  display: flex;
-  justify-content: space-between;
   opacity: 0;
-  position: relative;
   transition: 0.5s ease-in-out;
 }
 
 .project-bio {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  top: 160px;
+  top: 50%;
   left: 10px;
 }
 
@@ -158,11 +131,10 @@ body {
 #footer .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  /*thx fr will overflow*/
   justify-content: center;
   color: #ffffff;
   min-height: 160px;
-  text-align: center;
 }
 
 #footer a {
@@ -275,17 +247,6 @@ h2::selection {
   cursor: pointer;
 }
 
-#card1 a {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  font-size: 1.1rem;
-  margin-right: 0.3rem;
-}
-
-.card a:hover {
-  color: var(--primary-color);
-}
-
 #card1:hover {
   box-shadow: inset 0 100px 1000px 10px rgb(247, 146, 14);
 }
@@ -304,14 +265,6 @@ h2::selection {
   transition: 0.4s ease-in-out;
   cursor: pointer;
 }
-
-#card2 a {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  font-size: 1.1rem;
-  margin-right: 0.3rem;
-}
-
 
 
 #card2:hover {
@@ -333,13 +286,6 @@ h2::selection {
   cursor: pointer;
 }
 
-#card3 a {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  font-size: 1.1rem;
-  margin-right: 0.3rem;
-}
-
 #card3:hover {
   box-shadow: inset 0 100px 1000px 10px rgb(255, 135, 245);
 }
@@ -359,13 +305,6 @@ h2::selection {
   cursor: pointer;
 }
 
-#card4 a {
-  color: #ffffff;
-  transition: 0.25s ease-in-out;
-  font-size: 1.1rem;
-  margin-right: 0.3rem;
-}
-
 
 #card4:hover {
   box-shadow: inset 0 100px 1000px 10px rgba(168, 72, 72, 0.8);
@@ -375,14 +314,6 @@ h2::selection {
   opacity: 1;
 }
 
-
-
-#main {
-  position: relative;
-  width: 100%;
-  height: 150vh; 
-  overflow: hidden;
-}
 
 .background-video {
   position: absolute;
@@ -418,7 +349,6 @@ h2::selection {
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -479,7 +409,6 @@ body::-webkit-scrollbar-thumb {
 
 .inner.hover {
   background: #b3ff00;
-  /* mix-blend-mode: difference; */
   opacity: 0.25;
 }
 
@@ -500,15 +429,7 @@ body::-webkit-scrollbar-thumb {
   color: black;
   text-align: center;
 }
-.skills .heading {
-  padding-top: 1.5cm;
-  padding-bottom: 1.5cm;
-  text-align: center;
-  margin: 1.5rem 0;
-}
-.skills .heading span {
-  color: rgb(255, 230, 0);
-}
+
 .skills .containers {
   /* background: rgba(0, 0, 22, 0.4); */
   color: black;
@@ -574,15 +495,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 
-.parallax-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  font-size: 24px; 
-}
 
 html {
   cursor: none; 
