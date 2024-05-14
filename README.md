@@ -1,4 +1,4 @@
-<h2>Note: Background video is not uploadable due to size limitations (100mb+), so ive added a video preview for the html page.</h2>
+<h2>Note: Background video is not uploadable due to size limitations (100mb+)</h2>
 
 Notable features: <br>
 Scroll reveal animation <br>
